@@ -1,0 +1,18 @@
+.archive-pagination {
+
+    margin-top: 10rem;
+
+    // span a {
+    //     @extend .link--projects ;
+
+    // }
+
+    &__next {
+        float: right;
+    }
+
+    &__previous {
+        float: left;
+    }
+
+}

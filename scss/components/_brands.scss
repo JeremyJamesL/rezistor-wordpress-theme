@@ -1,0 +1,49 @@
+.brands {
+    
+    .row {
+
+        &:not(:last-child) {
+            margin-bottom: 10rem;
+
+            @media(max-width: 768px) {
+                margin-bottom: 0rem;
+            }
+
+
+        }
+
+        
+        @include respond(tab-land) {
+            text-align: center;
+        }
+
+    }
+
+    &__brand {
+
+        display: flex;
+        justify-content: center;
+        
+        img {
+            max-width: 200px;
+            height: auto;
+
+            @include respond(tab-land) {
+                // max-width: 80%;
+            }
+
+            @include respond(phone) {
+                margin-bottom: 20px;
+            }
+
+                        
+            @media(max-width: 768px) {
+                margin-bottom: 50px;
+            }
+
+
+        }
+    }
+
+
+}

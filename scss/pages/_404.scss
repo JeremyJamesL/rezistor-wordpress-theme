@@ -1,0 +1,47 @@
+.fourofour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    padding: 0 15px 0 15px;
+    text-align: center;
+
+
+    &__text {
+        font-size: 30rem;
+        background-image: linear-gradient(to right, $color-red, #780116);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    &__not-found{
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        padding: 1.5rem 2.5rem;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-red;
+        text-transform: uppercase;
+        border: 2px solid $color-red;
+        letter-spacing: .1em;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-red;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,59 @@
+// Basic reset
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    //This defines what 1rem is
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+    scroll-behavior: smooth;
+    
+    @include respond(desk-big){
+        font-size: 65%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 47%;
+    }
+    
+}
+
+body {
+    position: relative;
+    font-size: 2rem; // =16px
+    line-height: 1.2;
+    color: $color-white;
+    font-family: $font-primary;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: $color-black; 
+}
+
+// Override Bootstrap width
+
+@media (min-width : 1200px) {
+
+    .container { width: 1400px; } 
+
+}
+
+//Reset button background colour
+
+button {
+    background-color: transparent;
+    border: none;
+}

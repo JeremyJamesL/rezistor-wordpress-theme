@@ -1,0 +1,21 @@
+.directors-section {
+    padding: 5em 0rem;
+}
+
+.director-list {
+    list-style-type: none;
+    text-align: center;
+}
+
+.director-name {
+    &:not(:last-child) {
+    margin-bottom: 6rem;
+    }
+
+    &__link {
+        @extend .heading-large-white ;
+        max-width: 100%;
+        font-weight: 700;
+    }
+
+}

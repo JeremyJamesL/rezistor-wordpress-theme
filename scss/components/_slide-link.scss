@@ -1,0 +1,50 @@
+.slide-link {
+    position: relative; 
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0; height: 3px;
+        display: block;
+        margin-top: 5px;
+        right: 0;
+        background: #fff;
+        transition: width .2s ease;
+        -webkit-transition: width .2s ease;
+    }
+
+}
+
+.slide-link:hover:after{
+    width: 100%;
+    left: 0;
+    background: #fff;
+}
+
+
+// Emulate effect on WP classes
+
+.single-work__services a,
+.single-work__directors a {
+      position: relative; 
+
+&:after {
+      content: '';
+      position: absolute;
+      width: 0; height: 3px;
+      display: block;
+      margin-top: 5px;
+      right: 0;
+      background: #fff;
+      transition: width .2s ease;
+      -webkit-transition: width .2s ease;
+  }
+
+}
+
+.single-work__services a:hover:after,
+.single-work__directors a:hover:after {
+    width: 100%;
+    left: 0;
+    background: #fff;
+  }

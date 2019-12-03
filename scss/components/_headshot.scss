@@ -1,0 +1,63 @@
+.headshot {
+
+    height: 30rem;
+    width: 30rem;
+    background-image:  linear-gradient(to right, rgba($color-red, .3), rgba(121, 1, 23, .3));
+    position: relative;
+    box-shadow: 10px 10px  $color-white;
+
+    @include respond(tab-land) { 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        z-index: -1;
+    }
+
+    &__social {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        list-style: none;
+        display: inline-block;
+
+        opacity: 0;
+
+        transition: all .3s;
+
+
+        &-link {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }   
+    }
+
+}
+
+//Animation
+
+
+body.non-touch .director__container {
+    
+     &:hover {
+        .headshot__social {
+        right: 10px;
+        opacity: 1;
+        }
+    }
+}
+
+
+body.touch .headshot__social {
+    right: 10px !important;
+    opacity: 1 !important;
+}

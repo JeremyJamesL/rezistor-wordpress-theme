@@ -1,0 +1,126 @@
+//Alignment
+
+/*Margin center*/
+.mg-center {
+    margin: 0 auto;
+}
+
+.mg-left {
+    margin-left: auto;
+}
+
+/*Text aligbment*/
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+/* Displays */
+
+.inline-block {
+    display: inline-block;
+}
+
+
+//Spacing
+
+.mb-3 {
+    margin-bottom: 3rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 5rem !important;
+}
+
+.mb-10 {
+    margin-bottom: 10rem !important;
+}
+
+.pbt-10 {
+    padding: 10rem 0rem !important;
+}
+
+.pbt-5 {
+    padding: 5rem 0rem !important;
+}
+
+
+.pt-3 {
+    padding-top: 3rem !important;
+}
+
+.pt-5 {
+    padding-top: 5rem !important;
+}
+
+.pt-10 {
+    padding-top: 10rem !important;
+}
+
+.pt-15 {
+    padding-top: 15rem !important;
+}
+
+
+.pb-3 {
+    padding-bottom: 3rem !important;
+}
+
+.pb-5 {
+    padding-bottom: 5rem !important;
+}
+
+.pb-10 {
+    padding-bottom: 10rem !important;
+}
+
+.pb-15 {
+    padding-bottom: 15rem !important;
+}
+
+
+
+.pl-5 {
+    padding-left: 5rem !important;
+}
+
+//Typography
+
+.txt-black {
+    color: $color-black;
+}
+
+.section--services {
+
+    .txt-black {    
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+
+}
+
+.txt-max-width {
+    max-width: 60%;
+}
+
+.txt-max-width-70 {
+    max-width: 900px;
+}
+
+
+//Images
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}

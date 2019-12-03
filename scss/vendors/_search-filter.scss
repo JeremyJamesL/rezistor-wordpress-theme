@@ -1,0 +1,62 @@
+// Override styles from Search & Filter Pro plugin
+// .work-filters {
+//     padding: 5rem 0rem;
+// }
+
+
+.searchandfilter {
+
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    ul li {
+        display: inline-block;
+
+        @include respond(phone) {
+            display: block;
+        }
+
+        &:first-child {
+        
+            margin-right: 10rem;
+
+            @include respond(phone) {
+                margin-right: 0rem;
+                margin-bottom: 20px;
+            }
+        
+        }
+    }
+
+
+    .sf-input-select {
+        color: $color-white;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-white;
+        padding-bottom: 10px;
+
+        option {
+            color: $color-white;
+            background-color: $color-black; 
+            transition: all .2s;
+        }
+
+    }
+
+    .sf-field-reset {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+
+        .search-filter-reset {
+            padding: 10px 15px;
+            background-color: transparent;
+            border: 1px solid $color-white;
+        }
+
+    }
+
+}

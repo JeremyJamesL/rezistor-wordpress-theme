@@ -1,0 +1,226 @@
+@mixin title-line {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 500rem;
+    z-index: 2;
+}
+
+p {
+
+    @extend .service__descr ;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+
+.heading {
+
+    &--primary {
+        text-transform: uppercase;
+        font-size: 8rem;
+        letter-spacing: 5px;
+        margin-top: 0rem;
+
+        @include respond(tab-land) {
+            letter-spacing: 6px;
+        }
+    
+        @include respond(tab-port) {
+            letter-spacing: 4px;
+        }
+    
+        @include respond(phone) {
+            letter-spacing: 2px;
+            font-size: 40px;
+        }
+    }
+
+}
+
+ 
+.heading-large-white {
+    max-width: 70%;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    position: relative;
+
+    
+    @include respond(tab-land) {
+        letter-spacing: 6px;
+    }
+
+    @include respond(tab-port) {
+        letter-spacing: 4px;
+    }
+
+    @include respond(phone) {
+        letter-spacing: 2px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    &--line {
+        &::before {
+            @include title-line;
+            left: -505rem;
+            background-color: $color-white;
+            top: 50%;
+        }
+    }
+
+}
+
+
+.heading-large-black {
+    color: $color-black;
+    @extend .heading-large-white ;
+
+    &--line {
+        &::before {
+            @include title-line;
+            left: -505rem;
+            background-color: $color-black;
+            top: 50%;
+        }
+    }
+
+}
+
+
+
+.heading-small-red {
+    text-transform: uppercase;
+    color: $color-red;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    position: relative;
+
+    &::after {
+        @include title-line;
+        background-color: $color-red;
+        right: -505rem;
+        top: 10px;
+    }
+
+}
+
+.heading-large-red {
+    color: $color-red;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 7rem;
+    letter-spacing: 10px;
+    margin-bottom: 10rem;
+}
+
+
+.heading-small-white {
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    position: relative;
+
+    &--line {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 500rem;
+            z-index: 2;
+            left: -505rem;
+            background-color: #ffffff;
+            top: 10px;
+        }
+    }
+
+
+
+}
+
+
+// Links
+
+a {
+    color: $color-white;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.link {
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--projects {
+        color: $color-white;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        font-weight: 600;
+        // padding-bottom: 2rem;  
+        
+            @include respond(tab-port) {
+                display:  inline-block;
+                margin-bottom: 40px;   
+        }
+
+    }
+
+    &--after-title {
+        font-size: 2.5rem;
+        letter-spacing: normal;
+        font-weight: 600;
+    }
+
+
+
+}
+
+
+
+// RED UNDERLINE TITLES
+
+.red-underline {
+    line-height: 1;
+    background-color: $color-red;
+}
+
+
+
+//LINE
+
+.line {
+    border-top: 1px solid white;
+    max-width: 1360px;
+    overflow: hidden;
+    // margin-right: auto;
+}
+
+
+//BASE STYLING
+
+h2 {
+    margin: 0.5em 0;
+}
+
+h3 {
+    margin: 0.45em 0;
+}
+
+h4 {
+    margin: 0.4em 0;
+}

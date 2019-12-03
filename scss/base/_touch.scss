@@ -1,0 +1,161 @@
+/*** STYLING FOR DEVICES WITH TOUCH AND NON-TOUCH CAPABILITIES. 
+*
+*
+*
+*
+****/
+
+
+/* TOUCH: Styling for devices with NO touch capabilities */
+
+body.non-touch { 
+    
+    // Single project thumbnail. Move arrow on hover
+    .single-project__title:hover .link__arrow {
+        margin-left: 2rem;
+    }
+
+
+    // Main menu. Create menu item red background 
+    .menu-primary-menu-container .menu-item a {
+
+        line-height: 1;
+        
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 50%;
+            left: -50%;
+            transform: translateY(-50%);
+            background-color: $color-red;
+            opacity: 0;
+            transition: all .4s;
+            z-index: -1;
+        }
+
+
+        // Animate menu-item background when .menu-item is hovered
+
+        &:hover:before {
+        opacity: 1;
+        left: 0;
+
+        }
+    
+    }
+
+    //LINKS AFTER TITLE
+    .link--after-title {
+
+        .link__arrow {
+            transition: all .4s;
+        }
+
+        &:hover .link__arrow {
+            margin-left: 20px;
+        }
+
+    }
+
+
+
+    //SLIDE LINK 
+
+    .slide-link {
+        position: relative; 
+    
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0; height: 3px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #fff;
+            transition: width .2s ease;
+            -webkit-transition: width .2s ease;
+        }
+    
+    }
+    
+    .slide-link:hover:after{
+        width: 100%;
+        left: 0;
+        background: #fff;
+    }
+    
+    
+    // EMULATE SLIDE LINK ON WP ELEMENTS
+    
+    .single-work__services a,
+    .single-work__directors a {
+          position: relative; 
+    
+    &:after {
+          content: '';
+          position: absolute;
+          width: 0; height: 3px;
+          display: block;
+          margin-top: 5px;
+          right: 0;
+          background: #fff;
+          transition: width .2s ease;
+          -webkit-transition: width .2s ease;
+      }
+    
+    }
+    
+    .single-work__services a:hover:after,
+    .single-work__directors a:hover:after {
+        width: 100%;
+        left: 0;
+        background: #fff;
+      }
+    
+   
+}
+
+
+
+
+
+/* NON-TOUCH: Styling for devices WITHOUT touch capabilities */
+
+body.touch {
+
+    .single-project {
+        
+        &__title {
+            bottom: 10%;
+            opacity: 1;
+        }
+    }
+
+    .slide-link {
+        padding: 2rem;
+        border: 1px solid $color-white;
+        transition: all .4s;
+
+
+        &:active {
+            background-color: $color-white;
+            color: $color-black;
+        }
+
+    }
+
+}
+
+
+/* APPLIES TO BOTH */
+
+//LINK ARROW
+
+
+.link__arrow {
+    transition: all .4s;
+    margin-left: 10px;
+}

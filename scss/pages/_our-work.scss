@@ -1,0 +1,18 @@
+//After header
+.our-work {
+    padding: 10rem 0rem 20rem;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+        
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+}

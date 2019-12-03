@@ -1,0 +1,24 @@
+//Footer Widgets
+
+.footer {
+
+    .widget {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+        }
+
+    }
+
+}

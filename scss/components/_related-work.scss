@@ -1,0 +1,46 @@
+// FOR DISPLAYING RELATED PROJECTS ON SINGLE PROJECT POST
+
+.related-work {
+    max-height: 287px;
+    position: relative;
+    overflow: hidden;
+
+    &__thumb {
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+        transition: all .4s;
+    }
+
+    &__title {
+        @extend .single-project__title ;
+        // position: absolute;
+    }
+
+    &:hover &__title {
+        bottom: 3rem;
+        opacity: 1;
+    }
+
+    &:hover &__thumb {
+        transform: scale(1);
+        filter: grayscale(1);
+    }
+
+}
+
+
+//PARENT CONTAINER
+
+.related-works-container {    
+    [class*="col"] {
+        @include respond(tab-port) {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        }
+    }
+
+}

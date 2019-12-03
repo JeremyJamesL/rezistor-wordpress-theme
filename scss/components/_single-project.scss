@@ -1,0 +1,49 @@
+// STYLING FOR DISPLAYING SINGLE PROJECTS ON INDEX PAGES, SUCH AS ON 'OUR WORK' //
+
+.single-project {
+    position: relative;
+    // max-width: 100%;
+    overflow: hidden;
+
+    &__title {
+        // padding: 1.5rem;
+        // background-color: $color-black;
+        text-transform: uppercase;
+        position: absolute;
+        color: $color-white;
+        left: 5rem; 
+        bottom: 0%;
+        // transform: translate(-50%, 0);
+        opacity: 0;
+        // bottom: 0;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        transition: all .4s;
+    }
+
+    &__thumb {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        transition: all .4s;
+        // transform: scale(1.05);
+    }
+
+
+    // When hover single project
+    
+    &:hover &__thumb {
+        // transform: scale(1.1);
+        filter: grayscale(1);
+    }
+
+
+    &:hover &__title {
+        bottom: 10%;
+        // transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+
+}
+

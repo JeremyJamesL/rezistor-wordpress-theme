@@ -1,0 +1,94 @@
+.main-nav {
+
+    &__right {
+        position: absolute; // Relative to .header-homepage(position: relative;)
+        right: 4rem;
+        top: 4rem;
+        display: flex;
+        align-items: center;
+        z-index: 4;
+    }
+    
+    &__toggle {
+        display: inline-block;
+        margin-left: 20rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+            margin-left: 0rem;
+        }
+        
+
+        &-bar {
+            height: 5px;
+            width: 50px;
+            background-color: $color-white;
+            transition: all .4s;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &:last-child {
+                margin-left: auto;
+                width: 3rem;
+            }
+
+            &--transform {
+
+                &:nth-child(1) {
+                    transform: rotate(45deg) translateY(22px);
+                }
+
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                    transform: rotate(-45deg) translateY(-20px);
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+}
+
+
+//Only show 'GET STARTED' on homepage.
+
+.main-nav__started {
+
+    display: none;
+    transition: all .3s;
+
+
+    a {
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+}
+
+.home .main-nav__started {
+    display: inline-block;
+    opacity: 1;
+    
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &--hide {
+       display: none;
+    }
+
+}
